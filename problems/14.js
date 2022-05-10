@@ -7,7 +7,22 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    for (let x = 0; x < numbers.length; x++)
+    {
+        const current = numbers[x];
+        let count = 0;
+        for (let y = x + 1; y < numbers.length; y++)
+        {
+            if (current === numbers[y])
+            {
+                count++;
+                if (count >= Math.floor(numbers.length / 2))
+                {
+                    return numbers[y];
+                }
+            }
+        }
+    }
 }
 
 const tests = [

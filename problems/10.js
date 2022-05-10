@@ -7,7 +7,9 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    let beginning = str.substring(0, str.length / 2).toUpperCase();
+    let end = str.substring(str.length / 2).toLowerCase();
+    return beginning + end;
 }
 
 const tests = [
